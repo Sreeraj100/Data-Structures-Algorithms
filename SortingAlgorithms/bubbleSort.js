@@ -13,7 +13,7 @@ function bubbleSort(arr) {
   } while (swapped);
 }
 
-let arr = [8, 6, 3, 1, 2, 4, 7, 5];
-console.log(arr); //orginal
+let arr = [20,8,-2,4,-6]
+// console.log(arr); //orginal
 bubbleSort(arr);
 console.log(arr); //sorted 
