@@ -17,38 +17,39 @@ It includes detailed implementations of:
 ## 📂 Folder Structure
 
 ```bash
-DSA/
+Data-Structures-Algorithms/
 │
-├── Sorting/
-│   ├── BubbleSort.js
-│   ├── SelectionSort.js
-│   ├── InsertionSort.js
-│   ├── MergeSort.js
-│   ├── QuickSort.js
+├── algorithms/
+│   ├── sorting/
+│   │   ├── BubbleSort.js
+│   │   ├── SelectionSort.js
+│   │   ├── InsertionSort.js
+│   │   ├── MergeSort.js
+│   │   └── QuickSort.js
+│   │
+│   └── searching/
+│       ├── LinearSearch.js
+│       └── BinarySearch.js
 │
-├── Searching/
-│   ├── LinearSearch.js
-│   ├── BinarySearch.js
+├── hashtable/
+│   └── HashTable.js
 │
-├── HashTable/
-│   ├── CustomHashTable.js
-│
-├── Stack/
+├── stack/
 │   ├── StackUsingArray.js
-│   ├── StackUsingLinkedList.js
+│   └── StackUsingLinkedList.js
 │
-├── Queue/
+├── queue/
 │   ├── QueueUsingArray.js
-│   ├── QueueUsingLinkedList.js
+│   └── QueueUsingLinkedList.js
 │
-├── Graph/
+├── graph/
 │   ├── GraphAdjList.js
 │   ├── DFS.js
-│   ├── BFS.js
+│   └── BFS.js
 │
-├── Trie/
-│   ├── TrieInsertSearch.js
+├── trie/
+│   └── TrieInsertSearch.js
 │
-├── Heap/
+├── heap/
 │   ├── MinHeap.js
-│   ├── MaxHeap.js
+│   └── MaxHeap.js
