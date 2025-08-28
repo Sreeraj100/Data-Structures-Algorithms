@@ -45,7 +45,7 @@ class MinHeap {
             this.heapifyUp(this.parentInd(i))
         }
     }
-    peak() {
+    peek() {
         return this.heap[0]
     }
     removeMin() {
@@ -62,21 +62,37 @@ class MinHeap {
     heapifyDown(i) {
         let smallest = i
         if (this.hasLeftChild(i) && this.heap[i] > this.leftChild(i)) {
-            samllest = this.leftInd(i)
+            smallest = this.leftInd(i)
         }
-        if (this.hasRightChild(i) && this.heap[i] > this.RightChild(i)) {
-            samllest = this.RightInd(i)
+        if (this.hasRightChild(i) && this.heap[i] > this.rightChild(i)) {
+            smallest = this.rightInd(i)
         }
         if (smallest != i) {
             this.swap(smallest, i)
-            this.heapifyDown(samllest)
-        }
+            this.heapifyDown(smallest)
+        }   
 
+    }
+    display(){
+        for(let i of this.heap){
+            console.log(i);
+            
+        }
     }
 
 
 }
 
+const h = new MinHeap()
+h.insert(20)
+h.insert(40)
+h.insert(10)
+h.insert(30)
+h.removeMin()
+h.removeMin()
+h.insert(10)
+h.insert(20)
+h.display()
 
 
 
