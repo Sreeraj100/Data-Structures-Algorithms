@@ -61,16 +61,17 @@ Data-Structures-Algorithms/
 │   │   └── BinarySearchTree.js
 │   │
 │   ├── Heap/
-│   │   ├── Heap.js
+│   │   ├── HeapSort.js
 │   │   ├── MaxHeap.js
 │   │   └── MinHeap.js
-│   │   └── HeapSort.js
+│   │   
 │   │
 │   ├── Trie/
 │   │   └── trie.js
 │   │
 │   └── Graph/
 │       └── graph.js
+│       └── WeightedGraph.js
 │
 └── README.md
 
