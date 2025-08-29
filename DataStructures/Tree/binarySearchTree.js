@@ -122,9 +122,87 @@ class BST{
       }
   }
   
-  height(){
+  height(root = this.root) {
+        if (!root) return -1
+        return 1 + Math.max(this.height(root.left), this.height(root.right))
+    }
+   countAll(root = this.root) {
+        if (!root) return 0
+        return 1 + this.countAll(root.left) + this.countAll(root.right)
+    }
+
+    countLeft(root = this.root) {
+        if (!root || !root.left) return 0
+        return this.countAll(root.left)
+    }
+
+    countRight(root = this.root) {
+        if (!root || !root.right) return 0
+        return this.countAll(root.right)
+    }
+     sum(root = this.root) {
+        if (!root) return 0
+        return root.value + this.sum(root.left) + this.sum(root.right)
+    }
+
+     deleteNode(root, value) {
+        if (!root) return null
+        if (value < root.value) {
+            root.left = this.deleteNode(root.left, value)
+        } else if (value > root.value) {
+            root.right = this.deleteNode(root.right, value)
+        } else {
+            if (!root.left && !root.right) return null
+            if (!root.left) return root.right
+            if (!root.right) return root.left
+            let minVal = this.min(root.right)
+            root.value = minVal
+            root.right = this.deleteNode(root.right, minVal)
+        }
+        return root
+    }
+
+
+     isBalanced(root) {
+        if (!root) return true
+        let lh = this.height(root.left)
+        let rh = this.height(root.right)
+        if (Math.abs(lh - rh) > 1) return false
+        return this.isBalanced(root.left) && this.isBalanced(root.right)
+    }
+
+
+
+   kthSmallest(k) {
+    let arr = []
     
-  }
+    
+    function inorder(node) {
+        if(node){
+            inorder(node.left)
+            arr.push(node.value) 
+            inorder(node.right)
+        }
+    }
+    
+    inorder(this.root)
+    return arr[k-1] 
+}
+
+kthLargest(k) {
+    let arr = []
+    
+    function inorder(node) {
+        if(node){
+            inorder(node.left)
+            arr.push(node.value)
+            inorder(node.right)
+        }
+    }
+    
+    inorder(this.root)
+    return arr[arr.length - k]
+}
 
 }
 
@@ -157,3 +235,16 @@ console.log("****Minimum Value****")
 console.log(bst.min(bst.root))
 console.log("****Maximum Value****")
 console.log(bst.max(bst.root))
+console.log("****Height****")
+console.log(bst.height());
+console.log("****Is Balanced****")
+console.log(bst.isBalanced())
+console.log("****Kth small & large****")
+console.log("3rd Smallest:", bst.kthSmallest(3))
+console.log("2nd Largest:", bst.kthLargest(2))
+console.log("****Delete Node****")
+bst.deleteNode(bst.root,10)
+bst.deleteNode(bst.root,15)
+bst.deleteNode(bst.root,20)
+bst.deleteNode(bst.root,30)
+bst.Bfs()
