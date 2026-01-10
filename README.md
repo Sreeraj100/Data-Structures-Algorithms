@@ -10,7 +10,8 @@ It includes detailed implementations of:
 - 🗃️ Hash Tables  
 - 📦 Stack & Queue
 - 🧱 Heap
-- 🌲 Trie    
+- 🌲 Tree
+- 🔡 Trie    
 - 🌐 Graphs  
 
   
