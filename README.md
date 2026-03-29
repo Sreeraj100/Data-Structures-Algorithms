@@ -1,6 +1,6 @@
 # 📚 DSA Repository
 
-Welcome to my **Data Structures and Algorithms** repository!  
+Welcome to my **Data Structures and Algorithms** repository
 This repo is a personal collection of important DSA concepts, implementations, and code practice in JavaScript .  
 It includes detailed implementations of:
 
